@@ -165,7 +165,7 @@ function __lucid_git_status
 
     # Render git status. When in-progress, use previous state to reduce flicker.
     set_color $lucid_git_color
-    echo -n $__lucid_git_static ''
+    echo -n $__lucid_git_static
 
     if ! test -z $__lucid_dirty
         echo -n $__lucid_dirty
@@ -221,7 +221,6 @@ function fish_prompt
         end
     end
 
-    echo ''
     __lucid_vi_indicator
 
     set -l prompt_symbol "$lucid_prompt_symbol"
@@ -236,6 +235,6 @@ function fish_prompt
     end
 
     set_color "$prompt_symbol_color"
-    echo -n "$prompt_symbol "
+    echo -n " $prompt_symbol "
     set_color normal
 end
